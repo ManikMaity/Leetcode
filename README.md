@@ -48,3 +48,35 @@ recursiveFn(5);
     }
 // here the allNum.push is after the recursive fn call
 ```
+
+- `recursion` using two pointers and reverse an array
+- in this we have to get the first index and the last index of the array and revese it recursivly.
+```js
+const test = [5, 5, 4, 6, 4];
+let i = 0;
+let j = test.length - 1;
+function reverse(i, j) {
+    if (i > j) {
+        return;
+    }
+    [test[i], test[j]] = [test[j], test[i]];
+    reverse(i + 1, j - 1);
+}
+reverse(i, j);
+console.log(test); // [ 4, 6, 4, 5, 5 ]
+```
+
+- reverse an arary using one variable - (length - 1 - firstindex)
+```js
+let i  = 0;
+let n = test.length;
+function swapValue (i){
+    if (i >= Math.ceil(n/2) ) return;
+    [test[i], test[n - i - 1]] = [test[n - 1 - i], test[i]];
+    i++;
+    swapValue(i, n - i - 1);
+}
+
+swapValue(i, n - i - 1);
+```
+- Easy single word palindrome checker - [Link](./NPP/easyPalidrome.js)
