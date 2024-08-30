@@ -42,10 +42,11 @@ function main() {
     {
         let n = parseInt(readLine());
         let obj = new Solution();
-        obj.printNos(n);
+        obj.printTillN(n);
         
     }
 }// } Driver Code Ends
+
 
 
 
@@ -58,35 +59,24 @@ function main() {
 
 /**
  * @param {number} n
- * @returns { }
+ * @returns {void}
 */
 
 class Solution{
-    printNos(N){
-        
+    
+    printTillN(n){
         let allNum = [];
-        /*
-        let i = 1;
-        function printNum(){
-            if (i > N) return;
-            allNum.push(i);
-            i++;
-            printNum();
-        }
-        
-        printNum()*/
-        
-        //  Using Backtracking
-        
-        function addToAllNum (i){
+          function addToAllNum (i){
             if (i <= 0) return;
             addToAllNum(i - 1);
             allNum.push(i);
         }
         
-        addToAllNum(N);
+        addToAllNum(n);
         
         console.log(...allNum)
-        
     }
 }
+
+
+
