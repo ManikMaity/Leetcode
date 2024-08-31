@@ -7,7 +7,9 @@
 ### Basic Recursion
 - Basic of recursions
 - Backtracking
-
+- reverse using two pointers and recursion
+- reverse by only one variable and using (n - 1 - i);
+- multiple recursive call inside recursion.
 
 ### Notes
 #### Basic maths - 26/08/2024
@@ -80,3 +82,8 @@ function swapValue (i){
 swapValue(i, n - i - 1);
 ```
 - Easy single word palindrome checker - [Link](./NPP/easyPalidrome.js)
+
+- `multiple recursive call` 
+- we can do multiple recursive call inside the recursion incide a recursion.
+- to find the fibonacci number we have recursivly call the fn(n - 1) and f(n - 2) until n = 0 or 1;
+- [Fibonacci Number](./1013-fibonacci-number/)

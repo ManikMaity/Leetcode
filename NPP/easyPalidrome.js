@@ -1,4 +1,4 @@
-const word = "MADAM";
+const word = "MDAM";
 
 function checkPlalindrome(str) {
     let i = 0;
@@ -11,7 +11,7 @@ function checkPlalindrome(str) {
             return;
         }
         i++;
-        checkBothLatter(i, n-i-1);
+        checkBothLatter(i);
     }
     checkBothLatter(i);
     return palidrome;
