@@ -11,6 +11,8 @@
 - reverse by only one variable and using (n - 1 - i);
 - multiple recursive call inside recursion.
 
+### Basic Hashing
+
 ### Notes
 #### Basic maths - 26/08/2024
 - In num extraction algorithem the time coplexity is O(log10(n)) because in loop we everytime devide it with 10.
@@ -87,3 +89,6 @@ swapValue(i, n - i - 1);
 - we can do multiple recursive call inside the recursion incide a recursion.
 - to find the fibonacci number we have recursivly call the fn(n - 1) and f(n - 2) until n = 0 or 1;
 - [Fibonacci Number](./1013-fibonacci-number/)
+
+#### Basic hashing - 01/09/2024
+
