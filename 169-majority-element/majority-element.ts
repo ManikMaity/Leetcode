@@ -1,20 +1,28 @@
 function majorityElement(nums: number[]): number {
-    const hashMap : {[num : string] : number} = {};
-    for (let i= 0; i < nums.length; i++){
-      let key = `${nums[i]}`
-      if (hashMap[key]){
-        hashMap[key]++;
-      }
-      else {
-        hashMap[key] = 1;
-      }
+    let ele;
+    let count = 0;
+    for (let i = 0; i < nums.length; i++){
+        if (count == 0){
+            ele = nums[i];
+            count = 1;
+        }
+        else if (ele == nums[i]){
+            count++;
+        }
+        else {
+            count--;
+        }
+    };
+
+    let count2 = 0;
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] == ele){
+            count2++;
+        }
     }
 
-    for (let key in hashMap){
-       if (hashMap[key] >= Math.ceil(nums.length / 2)){
-        return Number(key);
-      }
+    if (count2 > (nums.length / 2)) {
+        return ele;
     }
-
-    return -1;
+    return null;
 };
