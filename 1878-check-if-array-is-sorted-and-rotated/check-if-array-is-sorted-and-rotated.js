@@ -29,7 +29,7 @@ var check = function(nums) {
     // return false;
 
 
-    // MORE OPTIMIZED WAY - TWO POINTERS
+    // MORE OPTIMIZED WAY -  POINTER
     const arr = [...nums, ...nums];
     const n = arr.length;
     
