@@ -3,13 +3,22 @@
  * @return {number}
  */
 var arrangeCoins = function(n) {
-    let k = 0;
-    let i = 0;
+   let left = 1;
+   let right = n;
+   let ans = 1;
 
-    while (n >= k){
-        i++;
-        k = k + i;
+   while(left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+    const midbox = Math.floor((mid * (mid + 1)) / 2);
+    if (midbox > n){
+      right = mid - 1;  
     }
+    else {
+        ans = mid;
+        left = mid + 1;
+    }
+   }
 
-    return i - 1
+
+   return ans;
 };
